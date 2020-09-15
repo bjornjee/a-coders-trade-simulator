@@ -4,7 +4,8 @@ public enum TradeInstrument {
 	BOND("BOND"),
 	FUTURE("FUTURE"),
 	CASH("CASH"),
-	SWAP("SWAP");
+	SWAP("SWAP"),
+	STOCK("STOCK");
 	private String instrument;
 	
 	public String getInstrument() {

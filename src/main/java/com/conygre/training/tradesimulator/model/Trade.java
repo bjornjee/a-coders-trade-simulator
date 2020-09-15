@@ -5,19 +5,38 @@ import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+
+@Document(collection="trade")
 public class Trade {
 
-    @Id
-    private String _id;
+	@Id
+    private long id;
+    private String username;
     private Date created = new Date(System.currentTimeMillis());
     private TradeState state = TradeState.CREATED;
-    private TradeType type = TradeType.BUY;
+    private TradeType type;
+    private TradeInstrument instrument;
     private String ticker;
     private int quantity;
     private double price;
 
 
+    public String getUsername() {
+    	return username;
+    }
+    
+    public void setUsername(String username) {
+    	this.username = username;
+    }
+    
+    public TradeInstrument getInstrument() {
+    	return instrument;
+    }
+    
+    public void setInstrument(TradeInstrument instrument) {
+    	this.instrument = instrument;
+    }
+    
     public Date getCreated() {
         return created;
     }

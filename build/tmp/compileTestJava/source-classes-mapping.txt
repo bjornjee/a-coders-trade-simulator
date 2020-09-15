@@ -1,0 +1,2 @@
+com/conygre/training/tradesimulator/TradeSimulatorApplicationTests.java
+ com.conygre.training.tradesimulator.TradeSimulatorApplicationTests
